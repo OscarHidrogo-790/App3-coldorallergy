@@ -48,6 +48,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+		alert(cold_count);
         }
 
   </script>
@@ -95,53 +96,82 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container w3-flat-carrot w3-large">
         <p>Are your eyes watery or itchy?</p>
-		
-		<a href="#two" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#two" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+		<!--Changed what the question said and made the question large-->
+		<a href="#two" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#two" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 		<!-- Change the code to switch pages and it should be in the same line-->
     	</div>
 </div>
 
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-carrot w3-large">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
-		<a href="#three" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#three" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+		<!--Changed what the question said and made the question large-->
+		<a href="#three" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#three" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 	</div>
 </div>	
 	
 <div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-carrot w3-large">
 		<h1>Question 3</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>
-		<a href="#four" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#four" class="w3-button w3-round w3-padding-small w3-whte w3-large w3-hover-red"><b>No</b></a>
+		<!--Changed what the question said and made the question large-->
+		<a href="#four" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#four" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-whte w3-large w3-hover-red"><b>No</b></a>
 	</div>
 </div>	
 	
 <div class="page" id="four">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-carrot w3-large">
 		<h1>Question 4</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#five" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+		<!--Changed what the question said and made the question large-->
+		<a href="#five" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#five" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 	</div>
 </div>
 
 <div class="page" id="five">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-carrot w3-large">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Question 5?</p>
+		<!--Changed what the question said and made the question large-->
+		<a href="#six" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#six" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+	</div>
+</div>
+
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot w3-large">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Question 6?</p>
+		<!--Changed what the question said and made the question large-->
+		<a href="#six" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#six" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+	</div>
+</div>
+
+<div class="page" id="results">
+	<div class="w3-container w3-flat-carrot w3-large">
 		<h1>Thanks for participating</h1>
 	</div>
 	

@@ -55,14 +55,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Divides allergy count by 6(number of question) and turns into percentage//
 		var coldPercent = (cold_count/totalQuestions)*100;
 		//Divides cold count by 6(number of question) and turns into percentage/
-		allergyPercent = Math.min(allergyPercent, 100);
-		coldPercent = Math.min(coldPercent, 100);
+		var totalPercent = allergyPercent + coldPercent;
 		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
-		var remainingPercent = 100 - (allergyPercent + coldPercent);
-    		if (remainingPercent < 0) {
-
-			allergyPercent += remainingPercent;
-       			coldPercent += remainingPercent;
+    		 if (totalPercent !== 100) {
+		//Check if combines total is not equal to 100
+        		var scale = 100 / totalPercent;
+			 //Scales both vairables so they equal to 100
+       			allergyPercent *= scale;
+			coldPercent *= scale;
 		// If percentages exceed 100, this will adjust them
 		}
 		var resultText = document.getElementById("resultText");

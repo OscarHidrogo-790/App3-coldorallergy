@@ -182,25 +182,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
-<div id="results" class="page">
-    <div class="w3-container w3-flat-carrot">
-        <h1>Thanks for participating</h1>
-    </div>
-    <div id="content" class="w3-container">
-        <p>Probability it is allergies = <span id="allergyPercent"></span>%<br> Probability it is a cold = <span id="coldPercent"></span>%</p>
-    </div>
-</div>
+<div class="page" id="results">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Thanks for participating</h1>
+	<div
+		var resultText = document.getElementById("results");
+		<!--Added this part see what it does-->
+		<!--Added the result part to see what happens-->
 
-<script>
-    var total = allergy_count + cold_count;
-    var allergyPercent = ((allergy_count / total) * 100).toFixed(2);
-    var coldPercent = ((cold_count / total) * 100).toFixed(2);
-
-    document.getElementById("allergyPercent").textContent = allergyPercent;
-    document.getElementById("coldPercent").textContent = coldPercent;
-</script>
+	</div>
+	<div
+		var resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "Probability it is a cold =" + coldPercent;
+		<!--Added this part to see what happend-->
+	</div>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>You may die in the next few days.</p>
+	</div>
+</div>	
 	<!--Added this part to see what happens, delete if does nto work-->
 	<!--Added this whole part after a friend explained to me-->
+	<!--Put everything to how it was after it nor working, I guess my friend was of no help-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>

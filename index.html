@@ -58,15 +58,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		allergyPercent = Math.min(allergyPercent, 100);
 		coldPercent = Math.min(coldPercent, 100);
 		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
-		
 		var remainingPercent = 100 - (allergyPercent + coldPercent);
     		if (remainingPercent < 0) {
 
 			allergyPercent += remainingPercent;
        			coldPercent += remainingPercent;
 		// If percentages exceed 100, this will adjust them
-		
-		var resultText = document.getElementById("resultText");
+		}
+		var resultText = document.getElementById("resultant");
 		//command that tells the system to execute the "equation" with the given variables. Grammar is very important here!//
         resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
 		//Added the percentage signs//
@@ -74,11 +73,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//I found out that this is the "equation" to find the probability//
 	}
 	function restartTest() {
+	//Function to restart the test
  		allergy_count = 0;
 		cold_count = 0;
     		//Reset the counts of the variables//
     		location.href = "#content0";
 		//Send the person back to the first page//
+	}
+	
 }
   </script>
 
@@ -162,7 +164,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Changed what the question said and made the question large-->
 		<!--Made the question size normal-->
 		<a href="#four" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#four" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-whte w3-large w3-hover-red"><b>No</b></a>
+		<a href="#four" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
 	</div>
 </div>	

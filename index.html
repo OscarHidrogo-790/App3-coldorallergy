@@ -202,10 +202,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     <button id="showResultsButton" class="w3-button w3-flat-carrot">Show Results</button>
 
     <script>
-        // Function to show the results when the button is clicked
+        // Function to calculate the percentages and show the results when the button is clicked
         document.getElementById("showResultsButton").addEventListener("click", function() {
             var resultText = document.getElementById("content");
-            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "<br> Probability it is a cold = " + coldPercent;
+            var totalResponses = allergy_count + cold_count;
+            var allergyPercent = (allergy_count / totalResponses) * 100;
+            var coldPercent = (cold_count / totalResponses) * 100;
+            resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
         });
     </script>
 </div>

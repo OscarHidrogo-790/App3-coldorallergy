@@ -42,17 +42,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		(allergy_count);
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
-		(cold_count);
         }
+
 	function getResult() {
 		var allergyPercent=(allergy_count/6)*100;
 		//Divides allergy count by 6(number of question) and turns into percentage//
-		var coldPercent = (coold_count/6)*100;
+		var coldPercent = (cold_count/6)*100;
 		//Divides cold count by 6(number of question) and turns into percentage/
 		var resultText = document.getElementById("results");
 		//Not too sure what this does//
@@ -60,7 +59,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//Not too sure what this does, I will find out//
 	}
   </script>
-<!--Took off the alert part to see if that stopped making the box pop up-->
+
 
 
 <style>	
@@ -109,7 +108,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Changed what the question said and made the question large-->
 		<!--Made the question size normal-->
 		<a href="#two" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#two" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+		<a href="#two" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3Certainly! Continuing from where we left off:
+
+```html
+-white w3-large w3-hover-red"><b>No</b></a>
 		<!-- Change the code to switch pages and it should be in the same line-->
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
     	</div>

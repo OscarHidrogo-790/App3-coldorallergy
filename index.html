@@ -59,6 +59,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Not too sure what this does, I will find out//
 		//I found out that this is the "equation" to find the probability//
 	}
+	function restartTest() {
+ 		allergy_count = 0;
+		cold_count = 0;
+    		//Reset the counts of the variables//
+    		location.href = "#one";
+		//Send the person back to the first page//
+}
   </script>
 
 
@@ -204,6 +211,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Added this stupid part-->
 		<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 		<p id="resultText"></p>
+		<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
+    		<a href="#one" class="w3-button w3-white w3-round w3-hover-green"><b>Return to First Page</b></a>
+		<!--Button and location so the function can perform the action--> 
+		
 	</div>
 		<!--Added this whole part-->
 </div>

@@ -28,49 +28,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
    <head> 
       <title>Hello World</title>  
+	<!--Sets the title of the page-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
+	   <!--Imports CSS stylesheets-->
    </head> 
-
+<!--This "</>" signifies the end of an element-->
 
 <script>
 	var totalQuestions =6;
 	//I had to add this variable in order to ensure that both of the percentages added to a 100//
         var allergy_count = 0;
         var cold_count = 0;
-
+	//var is used to declare variables, values, and what you want the variable to do//
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
+	//Increases the count for allergy//
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+	//Increases the count for cold//
         }
 
 	function getResult() {
+	//Dsiplays and calculates percentages//
 		var allergyPercent=(allergy_count/totalQuestions)*100;
 		//Divides allergy count by 6(number of question) and turns into percentage//
 		var coldPercent = (cold_count/totalQuestions)*100;
 		//Divides cold count by 6(number of question) and turns into percentage/
 		var totalPercent = allergyPercent + coldPercent;
 		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
+		//Check if combined total is not equal to 100//
     		 if (totalPercent !== 100) {
-		//Check if combines total is not equal to 100
+		//Functions to fix percentages if they do not equal 100//
         		var scale = 100 / totalPercent;
-			 //Scales both vairables so they equal to 100
+			 //Scales both vairables so they equal to 100//
        			allergyPercent *= scale;
 			coldPercent *= scale;
-		// If percentages exceed 100, this will adjust them
 		}
 		var resultText = document.getElementById("resultText");
-		//command that tells the system to execute the "equation" with the given variables. Grammar is very important here!//
+		//Function to display the result. Grammar is very important here!//
         resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
 		//Added the percentage signs//
-		//Not too sure what this does, I will find out//
-		//I found out that this is the "equation" to find the probability//
+		//Tells the system how to display results. Two decimal points allowed//
 	}
 	function restartTest() {
 	//Function to restart the test
@@ -86,6 +90,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <style>	
+
 .body {
      margin: 0em;
 }
@@ -110,20 +115,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies</h1>
+<!--Header section-->
 </div>
 	
 <div id="content0" class="w3-container">
+<!--<div defines sections of the document. "id" gives a name to the page-->
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-button w3-white w3-round w3-hover-green"><b>Get Started</b></a>
+	<!--<a redirects the individual to the desired page. "class"gives the definition to an object in the code for example: button. The "w3-" specifies the style of the object-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
+ 	<!-- <p> starts a new paragraph-->
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>	
 <div class="page" id="one">
 	<div id="page" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
+		<!--<h1> is a header tag-->
 	</div>
 	
     	<div id="content1" class="w3-container">
@@ -132,6 +141,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Changed what the question said and made the question large-->
 		<!--Made the question size normal-->
 		<a href="#two" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<!--"onclcik" tells the system to do the desired action when clicking. For example: add one count to allergy. In this example, it also redirects the user to the next page-->
+		<!-- <b> Makes the words bold-->
 		<a href="#two" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 		<!-- Change the code to switch pages and it should be in the same line-->
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
@@ -189,11 +200,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content5" class="w3-container">
-	<p>Question 5?</p>
+	<p>Do you have a tickly throat?</p>
 		<!--Changed what the question said and made the question large-->
 		<!--Made the question size normal-->
-		<a href="#six" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
-		<a href="#six" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
+		<a href="#six" onclick="coldAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
+		<a href="#six" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-red"><b>No</b></a>
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
 	</div>
 </div>
@@ -204,7 +215,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content6" class="w3-container">
-	<p>Question 6?</p>
+	<p>Do you have diarrhea?</p>
 		<!--Changed what the question said and made the question large-->
 		<!--Made the question size normal-->
 		<a href="#results" onclick="allergyAdd();" class="w3-button w3-round w3-padding-small w3-white w3-large w3-hover-green"><b>Yes</b></a>
@@ -217,26 +228,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>	
-		<!--There was a mistake in the id name so i change both of the below ones-->
+		<!--There was a mistake in the ID name so i changed both of the below ones-->
 		<div id="content" class="w3 container">
-		<!--Added this las part to see what it does-->
 			<p>Click the button below to discover your fate!</p>
 		</div>
 	<div id="resultContainer" class="w3-container">
-		<!--Added this stupid part-->
 		<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 		<p id="resultText"></p>
 		<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
 		<!--Button and location so the function can perform the action--> 	
 		
 	</div>
-		<!--Added this whole part-->
 </div>
-	<!--Added this part to see what happens, delete if does nto work-->
-	<!--Added this whole part after a friend explained to me-->
-	<!--Put everything to how it was after it nor working, I guess my friend was of no help-->
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
+	<!--Footer tag-->
 	<p>DIY!</p>
 </footer>
 

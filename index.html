@@ -53,6 +53,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		//Divides allergy count by 6(number of question) and turns into percentage//
 		var coldPercent = (cold_count/6)*100;
 		//Divides cold count by 6(number of question) and turns into percentage/
+		allergyPercent = Math.min(allergyPercent, 100);
+		coldPercent = Math.min(coldPercent, 100);
+		//I noticed that if you go to a previous question and answer the percentage exceed the 100 percent value. So I looked up how to fix this//
 		var resultText = document.getElementById("resultText");
 		//command that tells the system to execute the "equation" with the given variables. Grammar is very important here!//
         resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";

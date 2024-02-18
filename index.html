@@ -49,7 +49,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
 		(cold_count);
         }
-
+	function getResult() {
+		var allergyPercent=(allergy_count/6)*100;
+		//Divides allergy count by 6(number of question) and turns into percentage//
+		var coldPercent = (coold_count/6)*100;
+		//Divides cold count by 6(number of question) and turns into percentage/
+		var resultText = document.getElementById("results");
+		//Not too sure what this does//
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+	//Not too sure what this does, I will find out//
+	}
   </script>
 <!--Took off the alert part to see if that stopped making the box pop up-->
 
@@ -183,9 +192,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Thanks for participating</h1>
+		<h1>Results</h1>
 		
-	<p>You may die in the next few days.</p>
+		<div id="content" class="w3 container">
+		<!--Added this las part to see what it does-->
+			<p>Click the button to discover your fate!</p>
+		</div>
+	<div id="actual results" class="w3-container">
+		<button onclick="getresults();">Results</button>
+		<button class="w3-button w3-white w3-round w3-hover-green"><b>Get Started</b></button>
+		<p id="results"></p>
+	</div>
+		<!--Added this whole part-->
 	</div>
 </div>	
 	<!--Added this part to see what happens, delete if does nto work-->

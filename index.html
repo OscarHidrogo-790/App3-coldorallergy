@@ -191,22 +191,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 <div class="page" id="results">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-	</div>	
-		<div id="content" class="w3 container">
-		<!--Added this las part to see what it does-->
-			<p>Click the button below to discover your fate!</p>
-		</div>
-	<div id="content" class="w3-container">
-		<!--Added this stupid part-->
-		<button onclick="getresult();">Results</button>
-		<p id="results"></p>
-	
-	</div>
-		<!--Added this whole part-->
-		<!--Deleted this whole part <button onclick="getresults();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>-->
-	</div>
+    <div class="w3-container w3-flat-carrot">
+        <h1>Thanks for participating</h1>
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p>You may die in the next few days.</p>
+    </div>
+
+    <button id="showResultsButton" class="w3-button w3-flat-carrot">Show Results</button>
+
+    <script>
+        // Function to show the results when the button is clicked
+        document.getElementById("showResultsButton").addEventListener("click", function() {
+            var resultText = document.getElementById("content");
+            resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "<br> Probability it is a cold = " + coldPercent;
+        });
+    </script>
+</div>
 
 	<!--Added this part to see what happens, delete if does nto work-->
 	<!--Added this whole part after a friend explained to me-->

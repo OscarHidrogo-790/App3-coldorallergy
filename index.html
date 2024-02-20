@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The code is designed to help diagnose whether a person is experiencing allergies or a cold based on their responses to questions. By answering these questions, the code calculates the probability of someone having allergies or a cold and presents the results accordingly.
+
  
 Known Issues:
-blah, blah, blah, blah
+There are potential issues, such as variable initialization clarity, percentage calculation accuracy, and the visibility of the disclaimer.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -41,8 +42,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var totalQuestions =6;
 	//I had to add this variable in order to ensure that both of the percentages added to a 100//
         var allergy_count = 0;
+	//var is used to declare variables, values, and what you want the variable to do//
+	//In this case is used to declare the value of allergy starts at 0//
         var cold_count = 0;
 	//var is used to declare variables, values, and what you want the variable to do//
+	//In this case is used to declare the value of cold starts at 0//
+
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
@@ -71,7 +76,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 			coldPercent *= scale;
 		}
 		var resultText = document.getElementById("resultText");
-		//Function to display the result. Grammar is very important here!//
+		//Function to display the results. Grammar is very important here! It is also used in the results page//
         resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<br> Probability it is a cold = " + coldPercent.toFixed(2) + "%";
 		//Added the percentage signs//
 		//Tells the system how to display results. Two decimal points allowed//
@@ -128,7 +133,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	<!-- <p> starts a new paragraph-->
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-</div>	
+</div>
+<!--All pages below have the same outline as the one below except for the results page-->
+<!--Page one starts here. Question 1 is asked along with two buttons for an answer-->
 <div class="page" id="one">
 	<div id="page" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -149,6 +156,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div>
 </div>
 
+	<!--Page two starts here. Question 2 is asked along with two buttons for an answer-->
+
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -164,6 +173,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 	
+	<!--Page three starts here. Question 3 is asked along with two buttons for an answer-->
+	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -178,7 +189,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
 	</div>
 </div>	
-	
+
+	<!--Page four starts here. Question 4 is asked along with two buttons for an answer-->
+
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -193,6 +206,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Changed the "onclick" options to allergy or cold accordingly-->
 	</div>
 </div>
+
+	<!--Page five starts here. Question 5 is asked along with two buttons for an answer-->
 
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
@@ -209,6 +224,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
+	<!--Page six starts here. Question 6 is asked along with two buttons for an answer-->
+
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
@@ -224,6 +241,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
+	<!--Page seven (results page) starts here. Two buttons are displayed, one for getting the results and one for coming back to the first page-->
+
 <div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
@@ -234,6 +253,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div>
 	<div id="resultContainer" class="w3-container">
 		<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
+		<!--Button to get the result using the variables stated above-->
 		<p id="resultText"></p>
 		<button onclick="restartTest();" class="w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b></button>
 		<!--Button and location so the function can perform the action--> 	
